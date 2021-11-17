@@ -25,23 +25,34 @@ pip install smsir
 GET Token
 
 ```python
-from smsir import Token
+from smsir.token import get_token
+
 
 # returns 'TOKEN'
-# get UserApiKey and SecretKey values from your panel
-Token(UserApiKey='value', SecretKey='value').get_token()
-
+get_token(UserApiKey='', SecretKey='')
 ```
+
+
+دریافت اعتبار
+
+GET credit
+```python
+from smsir.token import get_credit
+
+# returns 'credit'
+get_credit(token='')
+```
+
 
 ارسال پیام به شماره
 
 SendByMobileNumber
 
 ```python
-from smsir import sms
+from smsir.sms import send_by_mobile_number
 
 # returns 'sms response'
-sms().send_by_mobile_number(Messages='text', MobileNumbers='09XX', LineNumber='3000XXX', Token='GET Token')
+send_by_mobile_number(Messages='text', MobileNumbers='09XX', LineNumber='3000XXX', Token='GET Token')
 
 ```
 
@@ -50,10 +61,10 @@ sms().send_by_mobile_number(Messages='text', MobileNumbers='09XX', LineNumber='3
 Send VerificationCode
 
 ```python
-from smsir import sms
+from smsir.sms import VerificationCode
 
 # returns 'sms response'
-sms().VerificationCode(Code='code', MobileNumber='09XX', Token='GET Token')
+VerificationCode(Code='code', MobileNumber='09XX', Token='GET Token')
 
 ```
 
@@ -62,14 +73,14 @@ sms().VerificationCode(Code='code', MobileNumber='09XX', Token='GET Token')
 send UltraFast
 
 ```python
-from smsir import sms
+from smsir.sms import UltraFastSend
 
 # returns 'sms response'
 parameter_array = [
     {"Parameter": "Parameters1", "ParameterValue": "Value1"},
     {"Parameter": "Parameters2", "ParameterValue": "Value2"}
 ]
-sms().UltraFastSend(ParameterArray=parameter_array, TemplateId='', Token='GET Token')
+UltraFastSend(ParameterArray=parameter_array, TemplateId='', Token='GET Token')
 
 ```
 

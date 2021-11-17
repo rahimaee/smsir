@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+smsir/__init__.py
+smsir/customerclub.py
+smsir/sms.py
+smsir/token.py
+smsir.egg-info/PKG-INFO
+smsir.egg-info/SOURCES.txt
+smsir.egg-info/dependency_links.txt
+smsir.egg-info/not-zip-safe
+smsir.egg-info/requires.txt
+smsir.egg-info/top_level.txt
